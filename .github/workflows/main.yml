@@ -17,10 +17,7 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Install dependencies
-        run: pip install tkinter
-
-        
+           
       - name: Log in to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
