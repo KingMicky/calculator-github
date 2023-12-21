@@ -2,8 +2,7 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches:
-      - main
+    branches: ['main']
 
 jobs:
   build:
@@ -19,7 +18,7 @@ jobs:
           python-version: 3.8
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install tkinter
 
       - name: Log in to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
