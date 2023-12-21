@@ -17,9 +17,6 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Install dependencies
-        run: pip install tkinter
-
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
